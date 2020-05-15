@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="404.0" prefWidth="769.0" style="-fx-background-color: #e9d2f7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.MainScreenController">
+   <children>
+      <Label layoutX="24.0" layoutY="37.0" text="Inventory Management System" textFill="#2a05a1">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="24.0" layoutY="112.0" prefHeight="200.0" prefWidth="350.0" style="-fx-border-color: #b4b1b5; -fx-border-radius: 15;">
+         <children>
+            <Label layoutX="20.0" layoutY="14.0" text="Parts" />
+            <Button fx:id="addPartsButton" layoutX="150.0" layoutY="153.0" mnemonicParsing="false" onAction="#addPartsButtonClicked" prefHeight="25.0" prefWidth="52.0" style="-fx-font-family: Arial; -fx-font-size: 10px;" text="Add">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifyPartsButton" layoutX="214.0" layoutY="153.0" mnemonicParsing="false" onAction="#modifyPartsButtonClicked" prefHeight="25.0" prefWidth="54.0" style="-fx-font-family: Arial; -fx-font-size: 10px;" text="Modify" />
+            <Button fx:id="deletePartsButton" layoutX="279.0" layoutY="153.0" mnemonicParsing="false" onAction="#deletePartsButtonClicked" prefHeight="25.0" prefWidth="51.0" style="-fx-font-family: Arial; -fx-font-size: 10px;" text="Delete" />
+            <Button fx:id="mainPartSearchButton" layoutX="150.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#partSearchButtonClicked" prefHeight="17.0" prefWidth="70.0" style="-fx-font-family: Arial; -fx-font-size: 9px;" text="Search" />
+            <TextField fx:id="partSearchTextField" layoutX="224.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#partSearchOnEnter" prefHeight="17.0" prefWidth="110.0" />
+            <TableView fx:id="mainPartTable" layoutX="21.0" layoutY="45.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="95.0" prefWidth="309.0">
+               <columns>
+                  <TableColumn fx:id="mainPartIdColumn" prefWidth="66.0" style="-fx-font-size: 9px; -fx-font-family: Arial; -fx-font-weight: 100;" text="Part ID" />
+                  <TableColumn fx:id="mainPartNameColumn" prefWidth="76.0" style="-fx-font-size: 9px; -fx-font-weight: 100; -fx-font-family: Arial;" text="Part Name" />
+                  <TableColumn fx:id="mainPartInvLevelColumn" style="-fx-font-size: 9px; -fx-font-weight: 100; -fx-font-family: Arial;" text="Inventory Level" />
+                  <TableColumn fx:id="mainPartPriceColumn" prefWidth="86.0" style="-fx-font-size: 9px; -fx-font-family: Arial; -fx-font-weight: 100;" text="Price/Cost per Unit" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="398.0" layoutY="112.0" prefHeight="200.0" prefWidth="350.0" style="-fx-border-color: #b4b1b5; -fx-border-radius: 15;">
+         <children>
+            <Label layoutX="20.0" layoutY="14.0" text="Products" />
+            <TableView fx:id="mainProductTable" layoutX="21.0" layoutY="45.0" prefHeight="95.0" prefWidth="309.0">
+               <columns>
+                  <TableColumn fx:id="mainProductIdColumn" prefWidth="77.0" style="-fx-font-size: 9px; -fx-font-family: Arial; -fx-font-weight: 100;" text="Product ID" />
+                  <TableColumn fx:id="mainProductNameColumn" prefWidth="73.0" style="-fx-font-size: 9px; -fx-font-family: Arial; -fx-font-weight: 100;" text="Product Name" />
+                  <TableColumn fx:id="mainProductInvLevelColumn" prefWidth="71.0" style="-fx-font-size: 9px; -fx-font-family: Arial; -fx-font-weight: 100;" text="Inventory Level" />
+                  <TableColumn fx:id="mainProductPriceColumn" prefWidth="87.0" style="-fx-font-size: 9px; -fx-font-family: Arial; -fx-font-weight: 100;" text="Price/Cost per Unit" />
+               </columns>
+            </TableView>
+            <Button fx:id="addProductButton" layoutX="150.0" layoutY="152.0" mnemonicParsing="false" onAction="#addProductButtonClicked" prefHeight="25.0" prefWidth="51.0" style="-fx-font-family: Arial; -fx-font-size: 10px;" text="Add" />
+            <Button fx:id="modifyProductButton" layoutX="214.0" layoutY="152.0" mnemonicParsing="false" onAction="#modifyProductButtonClicked" prefHeight="25.0" prefWidth="51.0" style="-fx-font-family: Arial; -fx-font-size: 10px;" text="Modify" />
+            <Button fx:id="deleteProductButton" layoutX="278.0" layoutY="152.0" mnemonicParsing="false" onAction="#deleteProductButtonClicked" prefHeight="25.0" prefWidth="51.0" style="-fx-font-family: Arial; -fx-font-size: 10px;" text="Delete" />
+            <Button layoutX="150.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#productSearchButtonClicked" prefHeight="17.0" prefWidth="70.0" style="-fx-font-family: Arial; -fx-font-size: 9px;" text="Search" />
+            <TextField fx:id="productSearchField" layoutX="223.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#productSearchOnEnter" prefHeight="17.0" prefWidth="110.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="mainExitButton" layoutX="621.0" layoutY="339.0" mnemonicParsing="false" onAction="#mainExitButtonClicked" prefHeight="37.0" prefWidth="87.0" style="-fx-font-family: Arial; -fx-font-size: 10px;" text="Exit" />
+   </children>
+</AnchorPane>
